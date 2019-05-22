@@ -55,3 +55,19 @@ body {
     color: black;
     background: rgba(255, 255, 255, .8);
 }
+
+.loadStatus {
+    animation: fadeblink 2.0s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+@keyframes fadeblink {
+    0%,70% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
