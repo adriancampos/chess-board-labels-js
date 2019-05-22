@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Chess Labels Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2"> </script>
+
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <div class="boardContainer">
+        <img id="imgContainer" class="imgContainer" src="boards\sampleboard.jpeg" />
+
+        <div id="predictionContainer" class="predictionContainer"></div>
+    </div>
+
+    <div class="panel">
+        <input id='imginput' type='file' accept="image/*" onchange="loadImage()" title="upload" />
+        <br/>
+
+        <button id="predict" onclick="doPrediction()" disabled>Predict</button>
+        <button onclick="clearPredictionLabels()">Clear</button>
+
+        <!-- Button for debug -->
+        <!-- <button id="test" onclick="displayFakePredictions()">testDisplay</button> -->
+
+        <div id="loadStatus" class="loadStatus">Loading model...</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body {
+    display: flex;
+}
+
+.boardContainer {
+    position: relative;
+    width: 95vh;
+    height: 95vh;
+}
+
+@media(orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+    .boardContainer {
+        width: 95vw;
+        height: 95vw;
+    }
+}
+
+.predictionContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    background: rgba(0, 0, 0, .05);
+    flex: 1 1 auto;
+}
+
+.predictionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.predictionContainer .row {
+    flex: 1;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row
+}
+
+.predictionContainer .cell {
+    flex: 1;
+    text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, .8);
+}
